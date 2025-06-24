@@ -1,0 +1,22 @@
+# LoRA总结
+
+#LLM/any2any
+## LoRA 的主要使用场景有两个：
+### 1.主题/风格/人物 微调
+目标是让模型掌握某个新的语义、图像风格、角色形象、产品品牌等
+* 举例：
+  * “蛋白粉摇摇杯男” → 加强这个主题生成
+  * “宫崎骏风格插画” → 加强风格一致性
+  * “你的自拍照” → 私人定制 AI 头像
+典型关键词：DreamBooth、Character LoRA、Style LoRA、Concept Embedding
+
+### 2.任务微调（偏NLP/NLU）
+在语言模型上用 LoRA 微调做指令遵循、知识注入等。
+* 举例：
+  * 在 LLaMA 上用 LoRA 做 RAG 微调
+  * 微调 BERT 的问答能力
+ 属于 parameter-efficient fine-tuning（PEFT）
+## 🚫 LoRA 不能做什么？
+* 它**不等同于大规模模型重新训练或整体蒸馏**
+* 它不会自动提高生成清晰度、分辨率、构图能力
+* 它不适合“泛泛提升通用能力”
